@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="navbar.css">
+    <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        section{
+            margin-top: 30px;
+            
+            /* min-height:500px; */
+            display: flex;
+            justify-content: center;
+            align-content: center;
+           
+        }
+        body {
+            background-image: linear-gradient(to left, #E8CBC0 20%, #636FA4);
+            min-height: 100vh;
+           
+        }
+        .d1{
+            border-radius: 5%;
+            box-shadow: 10px 10px 30px 10px black;
+            padding: 20px;
+            width: 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            
+            background-image: url('https://i.ibb.co/LDVsCy0G/conn1.jpg');
+            
+
+            background-repeat: no-repeat;
+        background-size: 100% 100%;
+        }
+        @media(max-width:470px){
+            .d1{
+               width: 350px;
+               padding: 10px;
+            }
+        }
+        @media(max-width:390px){
+            .d1{
+              width: 300px;
+            }
+            
+        }
+
+        input{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 20px;
+            
+            padding: 5px;
+     border-radius: 5px;
+   
+     box-shadow: 2px 0px 10px 2px grey;
+     background-color:azure;
+        }
+        textarea{ font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 20px;
+            padding: 5px;
+     border-radius: 5px;
+   
+     box-shadow: 2px 0px 10px 2px grey;
+     background-color:azure;
+
+        }
+        
+        button{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 20px;
+            padding: 5px;
+     border-radius: 5px;
+   
+     box-shadow: 2px 0px 10px 2px grey;
+     background-color:azure;
+            background-image: linear-gradient(to left, #E8CBC0 20%, #636FA4);
+        }
+        button:hover{
+            background-image: linear-gradient(to left,#76b852,#8dc26f);
+
+        }
+        h1{
+            font-size: 35px;
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        footer{
+            color: white;
+            background-color: black;
+            position: fixed;
+            width: 100%;
+            bottom: 0px;
+           
+        }
+        .d2{
+            margin-left: 20px;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 5px;
+        }
+       div h3{
+            margin-top: 10px;
+            color: #c471ed;
+
+        }
+        .d3{
+            color: #c471ed;
+            text-align: center;
+            padding-bottom: 5px;
+        }
+        @media(max-width:1000px){
+            .d2{
+                font-size: 12px;
+            }
+            .d3{ 
+                font-size: 12px;
+            }
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="https://i.ibb.co/Wcx7kVC/teeicon.jpg" alt="teeicon">
+        </a>
+        
+        <nav>
+            <ul>
+                
+                <li><a href="aboutme.html">About</a></li>
+                <li><a href="skills_portfolio.html">Skills</a></li>
+                <li><a href="project_portfolio.html">Project</a></li>
+                <li><a href="contactme.html">Contact</a></li>
+            </ul>
+        </nav>  
+    </header>
+   
+        <section>
+            
+            
+                <form action="#" class="d1" autocomplete="off">
+                <h1>Contact Us</h1>
+                <input type="text" placeholder="Your Full Name" id="name" required>
+               <input type="email" placeholder="Your Email-Id" id="email" required>
+               <input type="text" placeholder="Your Phone Number" id="phone" required>
+               <textarea rows="3" cols="22" placeholder="Your Message" id="message"></textarea>
+                
+               <button type="submit">Send Message</button>
+            </form>
+            
+       
+    </section>
+
+</body>
+<footer>
+    <div class="d2">
+        <div><h3>Get In Touch</h3></div>
+    <div><p>Email: teeya2303@gmail.com</p>
+        <p>Phone No: 7721979571</p>
+        <p>Address: Mumbai, India.</p></div>
+    
+</div>
+<div class="d3"> &copy; 2025 Teeya Judent. All rights reserved.</div>
+</footer>
+</html>

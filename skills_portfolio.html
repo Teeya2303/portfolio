@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills Page</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-image: linear-gradient(to left, #E8CBC0 20%, #636FA4);
+            min-height: 100vh;
+           
+        }
+
+        
+        section{
+        
+        /* border: 1px solid black; */
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       padding: 80px;
+    }
+    #d1{
+            width: 700px;
+           /* min-height: 55vh; */
+          
+           /* background-image: url('skillsbg.jpg'); */
+           background-image:linear-gradient(45deg,rgba(128, 234, 255, 0.37),rgba(210, 196, 196, 0.573)),url(https://i.ibb.co/TxNshBYJ/skillsbg.jpg);
+
+           background-repeat: no-repeat;
+        background-size: 100% 100%;
+            border-radius: 5%;
+            box-shadow: 10px 10px 30px 10px black;
+            display: flex;
+           justify-content:center;
+           padding: 30px;
+          font-family:Georgia, 'Times New Roman', Times, serif;
+         
+           font-size: 30px;
+        }
+        
+        #d1 ul li {
+            line-height: 60px;
+           
+           filter: drop-shadow(5px 5px 5px black) ;
+
+        }
+
+
+        @media(max-width:404px){
+           
+            section {
+              width:300px;  
+              padding:30px;
+            
+            }
+            #d1{
+                width:100%;
+            }
+            #d1 ul li {
+                font-size: 16px;
+            
+            line-height: 50px;
+        }
+        }
+</style>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="https://i.ibb.co/Wcx7kVC/teeicon.jpg" alt="teeicon">
+        </a>
+        
+        <nav>
+            <ul>
+                
+                <li><a href="aboutme.html">About</a></li>
+                <li><a href="skills_portfolio.html">Skills</a></li>
+                <li><a href="project_portfolio.html">Project</a></li>
+                <li><a href="contactme.html">Contact</a></li>
+            </ul>
+        </nav>  
+    </header>
+    <main>
+        <section>
+           <div id="d1">
+               <ul>
+               <li><i class="fa-brands fa-html5"></i> HTML5</li>
+               <li><i class="fa-brands fa-js"></i> Javascript</li>
+               <li><i class="fa-solid fa-database"></i> SQL</li>
+               <li><i class="fa-brands fa-java"></i> JAVA</li>
+               <li><i class="fa-brands fa-css3-alt"></i> CSS3</li>
+               <li><i class="fa-solid fa-code"></i> Jquery</li>
+               <li><i class="fa-brands fa-bootstrap"></i> Bootstrap</li>
+           </ul>
+        </div>
+   </section>
+    </main>   
+   
+   </body>
+   </html>

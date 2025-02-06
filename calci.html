@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        section{
+            background-color: aliceblue;
+            min-height: 100vh;
+            /* width: 100%; */
+            display:flex;
+            justify-content: center;
+            align-items: center;
+           
+        }
+        table{
+           text-align: center;
+           /* width: 300px; */
+            /* border-collapse:separate; */
+            border: 5px double black;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.825);
+           box-shadow: 10px 10px 30px 10px black;
+        }
+        td{
+            padding: 5px;
+            box-shadow: 2px 2px 10px 2px grey;
+            border-radius: 5px;
+    
+        }
+        th{
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 2px 0px 10px 2px grey;
+        }
+        td input{
+         padding: 10px;
+         border-radius: 5px;
+         font-weight: bold;
+         /* border: 1px solid red; */
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         width: 100%; 
+        }
+        th input{
+         padding: 20px;
+         border-radius: 10px;
+         width: 300px;
+         color: white;
+         font-weight: bold;
+        }
+        td input:hover{
+            background-color:gray;
+        }
+        .t1 input{
+            background-color: palevioletred;
+        }
+        .t2 input{
+            background-color:orange;
+        }
+        .t1 input:hover{
+            background-color:lightpink;
+        }
+        .t2 input:hover{
+            background-color:goldenrod;
+        }
+
+        @media (max-width:450px){
+            th input{
+                width: 250px;
+            }
+            table{
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="4"><input type="text" id="Equation" placeholder="Calculate your Result" disabled></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td class="t1"><input type="button" id="ac" value="AC"></td>
+                    <td class="t1"><input type="button" id="c" value="C"></td>
+                    <td ><input type="button" class="in" value="%"></td>
+                    <td><input type="button" class="in" value="/"></td>
+                </tr>
+                <tr><td><input type="button" class="in" value="7"></td>
+                    <td><input type="button" class="in" value="8"></td>
+                    <td><input type="button" class="in" value="9"></td>
+                    <td><input type="button" class="in" value="*"></td>
+                </tr>
+                <tr><td><input type="button" class="in" value="4"></td>
+                    <td><input type="button" class="in" value="5"></td>
+                    <td><input type="button" class="in" value="6"></td>
+                    <td><input type="button" class="in" value="-"></td>
+                </tr>
+                <tr><td><input type="button" class="in" value="1"></td>
+                    <td><input type="button" class="in" value="2"></td>
+                    <td><input type="button" class="in" value="3"></td>
+                    <td><input type="button" class="in" value="+"></td>
+                </tr>
+                <tr><td><input type="button" class="in" value="0"></td>
+                    <td><input type="button" class="in" value="00"></td>
+                    <td><input type="button" class="in" value="."></td>
+                    <td class="t2"><input type="button" value="=" id="solve"></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <script>
+        let inputs = document.querySelectorAll("input.in");
+        let eq = document.getElementById("Equation");
+        console.log(inputs);
+
+        inputs.forEach((myinput)=>{
+            myinput.addEventListener("click",function(){
+                eq.value += myinput.value;
+            })
+        })
+
+        let solve=document.getElementById("solve");
+        solve.addEventListener("click",function (){
+            eq.value=eval(eq.value);
+        })
+        let allclear=document.getElementById("ac");
+        allclear.addEventListener("click",function(){
+            eq.value="";
+        })
+        let clear=document.getElementById("c");
+        clear.addEventListener("click",function(){
+            eq.value=eq.value.slice(0,-1);
+        })
+    </script>
+</body>
+</html>
